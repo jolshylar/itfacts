@@ -8,8 +8,10 @@ import {
 } from "@mui/material";
 
 function App() {
-  const [catFact, setCatFact] = useState("");
-  const [catImageUrl, setCatImageUrl] = useState("");
+  const [catFact, setCatFact] = useState("Bek loves cats");
+  const [catImageUrl, setCatImageUrl] = useState(
+    "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+  );
 
   const styles = {
     display: "flex",
@@ -67,21 +69,6 @@ function App() {
             Get a new image
           </Button>
         </CardActions>
-        <hr />
-        <Typography
-          sx={{ textAlign: "center", my: 1, fontSize: 18, fontWeight: 500 }}
-        >
-          You can appreciate our work using Kaspi:
-        </Typography>
-        <Typography sx={{ textAlign: "center" }}>
-          Бек Сламбек: +7 707 750 73 82
-        </Typography>
-        <Typography sx={{ textAlign: "center"}}>
-          Дастан Өзгелді: +7 700 268 90 14
-        </Typography>
-        <Typography sx={{ textAlign: "center", marginBottom: 1.5 }}>
-          Дарын Жантілеучик: +7 700 567 70 89
-        </Typography>
       </Card>
     </div>
   );
