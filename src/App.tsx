@@ -8,17 +8,10 @@ import {
 } from "@mui/material";
 
 function App() {
-  const [catFact, setCatFact] = useState("Bek loves cats");
+  const [catFact, setCatFact] = useState("Dastan loves cats");
   const [catImageUrl, setCatImageUrl] = useState(
     "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
   );
-
-  const styles = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: "25vh",
-  };
 
   const getCatFact = () => {
     return fetch("https://meowfacts.herokuapp.com/")
@@ -38,7 +31,14 @@ function App() {
   }, []);
 
   return (
-    <div style={styles}>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100vh",
+      }}
+    >
       <Card sx={{ maxWidth: 400 }}>
         <CardContent style={{ display: "flex", gap: "4px" }}>
           <div className="text">
